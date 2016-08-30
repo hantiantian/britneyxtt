@@ -76,39 +76,18 @@
                         <nav id="sub-nav">
                             <div id="search-form-wrap">
 
-    <form class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
-        <button type="submit" class="search-form-submit"></button>
-    </form>
-    <div class="ins-search">
-    <div class="ins-search-mask"></div>
-    <div class="ins-search-container">
-        <div class="ins-input-wrapper">
-            <input type="text" class="ins-search-input" placeholder="想要查找什么..." />
-            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
-        </div>
-        <div class="ins-section-wrapper">
-            <div class="ins-section-container"></div>
-        </div>
-    </div>
-</div>
+    <form class="search-form" method="GET" action="https://www.baidu.com/s?">
+    <input name="wd" type="text" class="search-form-input" placeholder="搜索" />
+</form>
 <script>
-(function (window) {
-    var INSIGHT_CONFIG = {
-        TRANSLATION: {
-            POSTS: '文章',
-            PAGES: '页面',
-            CATEGORIES: '分类',
-            TAGS: '标签',
-            UNTITLED: '(未命名)',
-        },
-        ROOT_URL: '/',
-        CONTENT_URL: '/content.json',
-    };
-    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
-})(window);
+(function ($) {
+    $('.search-form').on('submit', function (e) {
+        var keyword = $('.search-form-input[name="wd"]').val();
+        window.location = 'https://www.baidu.com/s?wd=site:hantiantian.github.io ' + keyword;
+        return false;
+    });
+})(jQuery);
 </script>
-<script src="/js/insight.js"></script>
 
 </div>
                         </nav>
@@ -158,7 +137,7 @@
 <span class="comment-counter">
     <i class="fa fa-comments-o"></i>
     
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="https://hantiantian.github.io/2016/08/30/dd/">0</span>
+        <span class="ds-thread-count" data-thread-key="2016/08/30/dd/">0</span>
     
 </span>
 
@@ -212,7 +191,7 @@ column
 <span class="comment-counter">
     <i class="fa fa-comments-o"></i>
     
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="https://hantiantian.github.io/2016/08/30/hello-world/">0</span>
+        <span class="ds-thread-count" data-thread-key="2016/08/30/hello-world/">0</span>
     
 </span>
 
@@ -418,16 +397,15 @@ Quick
 </footer>
         
     
-    <script>
-    var disqus_shortname = 'hexo-theme-hueman';
-    
-    
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:'hantiantian'};
     (function() {
-    var dsq = document.createElement('script');
-    dsq.type = 'text/javascript';
-    dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
     })();
     </script>
 
