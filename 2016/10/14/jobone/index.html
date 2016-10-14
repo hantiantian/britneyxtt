@@ -3,18 +3,23 @@
 <head>
     <meta charset="utf-8">
     
-    <title>布莱尼小甜甜</title>
+    <title>触发器 | 布莱尼小甜甜</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta name="description" content="person blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="布莱尼小甜甜">
-<meta property="og:url" content="https://hantiantian.github.io/index.html">
+        <meta name="keywords" content="" />
+    
+    <meta name="description" content="1.主要是通过事件进行触发被自动调用执行的。触发器对表进行插入、更新、删除的时候会自动执行的特殊存储过程，触发器和普通的存储过程的区别是：触发器是当对某一个表进行操作。诸如：update、insert、delete这些操作的时候，系统会自动调用执行该表上对应的触发器 DML触发器分为：    1、 after触发器（之后触发）：Inserted表和Deleted        a.ins">
+<meta property="og:type" content="article">
+<meta property="og:title" content="触发器">
+<meta property="og:url" content="https://hantiantian.github.io/2016/10/14/jobone/index.html">
 <meta property="og:site_name" content="布莱尼小甜甜">
-<meta property="og:description" content="person blog">
+<meta property="og:description" content="1.主要是通过事件进行触发被自动调用执行的。触发器对表进行插入、更新、删除的时候会自动执行的特殊存储过程，触发器和普通的存储过程的区别是：触发器是当对某一个表进行操作。诸如：update、insert、delete这些操作的时候，系统会自动调用执行该表上对应的触发器 DML触发器分为：    1、 after触发器（之后触发）：Inserted表和Deleted        a.ins">
+<meta property="og:image" content="http://p.3761.com/pic/75631409877601.jpg">
+<meta property="og:updated_time" content="2016-10-14T01:44:12.771Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="布莱尼小甜甜">
-<meta name="twitter:description" content="person blog">
+<meta name="twitter:title" content="触发器">
+<meta name="twitter:description" content="1.主要是通过事件进行触发被自动调用执行的。触发器对表进行插入、更新、删除的时候会自动执行的特殊存储过程，触发器和普通的存储过程的区别是：触发器是当对某一个表进行操作。诸如：update、insert、delete这些操作的时候，系统会自动调用执行该表上对应的触发器 DML触发器分为：    1、 after触发器（之后触发）：Inserted表和Deleted        a.ins">
+<meta name="twitter:image" content="http://p.3761.com/pic/75631409877601.jpg">
     
 
     
@@ -104,172 +109,149 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <em class="page-title-link" data-url="home">主页</em>
+    <a class="page-title-link" href="/categories/工作/">工作</a>
     </h1>
 </div>
                         <div class="main-body-content">
-                            
+                            <article id="post-jobone" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        触发器
+        </h1>
+    
 
-    
-    
+            </header>
         
         
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/archives/2016" class="archive-year"><i class="icon fa fa-calendar-o"></i>2016</a>
+            <div class="article-subtitle">
+                <a href="/2016/10/14/jobone/" class="article-date">
+    <time datetime="2016-10-14T01:13:00.000Z" itemprop="datePublished">2016-10-14</time>
+</a>
+                
             </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
         
-        <a href="/2016/10/14/jobone/" class="thumbnail">
-    
-    
-        <span style="background-image:url(http://p.3761.com/pic/75631409877601.jpg)" alt="触发器" class="thumbnail-image"></span>
-    
-    
         
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="ds-thread-count" data-thread-key="2016/10/14/jobone/">0</span>
-    
-</span>
+        <div class="article-entry" itemprop="articleBody">
+            <p><img src="http://p.3761.com/pic/75631409877601.jpg" alt="苦逼程序员"><br>     1.主要是通过事件进行触发被自动调用执行的。触发器对表进行插入、更新、删除的时候会自动执行的特殊存储过程，触发器和普通的存储过程的区别是：触发器是当对某一个表进行操作。诸如：update、insert、delete这些操作的时候，系统会自动调用执行该表上对应的触发器<br> DML触发器分为：<br>    1、 after触发器（之后触发）：Inserted表和Deleted<br>        a.insert触发器<br>        b.update触发器<br>        c.delete触发器<br>   2、 instead of 触发器 （之前触发）：Inserted表和Deleted<br>注意的是：触发器本身就是一个事务，所以在触发器里面可以对修改数据进行一些特殊的检查。如果不满足可以利用事务回滚，撤销操作。<br>注意：<br>     1.每个表的每个事件最多只能定义一个触发器<br>     2.触发器始终只针对一条记录的，而不是针对整个sql语句，如果变更的数据集非常大的话，效率会很低<br>触发器本身的限制也使用与MYSQL的有：<br>     1.触发器可以掩盖服务器背后的工作，一个简单的sql语句背后，因为触发器，可能包含了很多看不见的工作。例如，触发器可能会更新另一个相关表，那么这个触发器会让这条sql语句影响的记录数翻<br>     2.触发器的问题也很难排查，如果某个性能问题和触发器相关，那么原来的sql语句也会失败。<br>     3.触发器可能导致死锁和所等待。触发器失败原来的sql语句也失败，如果没有察觉是触发器引起的原因，那么很难理解服务器抛出的错误代码是什么。</p>
+<p>触发器的使用示例：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">Create</span> <span class="keyword">Table</span> Student(                                       <span class="comment">--学生表</span></div><div class="line">     StudentID <span class="built_in">int</span> primary <span class="keyword">key</span>,                             <span class="comment">--学号</span></div><div class="line">     ....</div><div class="line">)</div><div class="line"><span class="keyword">Create</span> <span class="keyword">Table</span> BorrowRecord(                          <span class="comment">--学生借书记录表</span></div><div class="line">    BorrowRecord   <span class="built_in">int</span> <span class="keyword">identity</span>(<span class="number">1</span>,<span class="number">1</span>),                <span class="comment">--流水号</span></div><div class="line">    StudentID      <span class="built_in">int</span> ,                             <span class="comment">--学号</span></div><div class="line">    BorrowDate     datetime,                         <span class="comment">--借出时间</span></div><div class="line">    ReturnDAte     Datetime,                         <span class="comment">--归还时间</span></div><div class="line">    ...</div><div class="line">)</div></pre></td></tr></table></figure>
+<p>用到的功能有:  </p>
+<ol>
+<li>如果我更改了学生的学号,我希望他的借书记录仍然与这个学生相关(也就是同时更改借书记录表的学号); </li>
+<li>如果该学生已经毕业，我希望删除他的学号的同时，也删除它的借书记录。等等。这时候可以用到触发器。对于1，创建一个Update触发器：<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">Create</span> <span class="keyword">Trigger</span> truStudent  </div><div class="line"><span class="keyword">On</span> Student              <span class="comment">--在Student表中创建触发器</span></div><div class="line"><span class="keyword">for</span> <span class="keyword">Update</span>          <span class="comment">--为什么事件触发</span></div><div class="line"><span class="keyword">As</span>                            <span class="comment">--事件触发后所要做的情</span></div><div class="line"><span class="keyword">if</span> <span class="keyword">Update</span>(StudentID)</div><div class="line"><span class="keyword">begin</span>   </div><div class="line"><span class="keyword">Update</span> BorrowRecord  <span class="keyword">Set</span> StudentID=i.StudentID  </div><div class="line"><span class="keyword">From</span> BorrowRecord br,Deleted d,Inserted i </div><div class="line"><span class="comment">--Deleted和Inserted临时表 </span></div><div class="line"><span class="keyword">Where</span> br.StudentID=d.StudentID</div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>理解触发器里面的两个临时的表：Deleted , Inserted 。注意Deleted 与Inserted分别表示触发事件的表“旧的一条记录”和“新的一条记录”。<br>| 虚拟表 | Inserted |Deleted|<br>|——–|——–|——–|<br>|在表记录新增时|存放新增的记录|不存储记录|<br>|修改时|存放用来更新的记录|存放更新前的记录|<br>|删除时|不存储记录|存放被删除的记录|</p>
 
-    
-</a>
-
-        
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/categories/工作/">工作</a>
-            </p>
-            <p class="date"><time datetime="2016-10-14T01:13:00.000Z" itemprop="datePublished">2016-10-14</time></p>
         </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2016/10/14/jobone/">触发器</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-                 1.主要是通过事件进行触发被自动调用执行的。触发器对表进行插入、更新、删除的时候会自动执行的特殊存储过程，触发器和普通的存储过程的区别是：触发器是当对某一个表进行操作。诸如：update、insert、delete这些操作的时候，系统会自动调用执行该表上对应的触发器 DML触发器分为：    1、 after触发器（之后触发）：Inserted表和Deleted        a.ins
-        </p>
-    </div>
-</article>
-    
-
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2016/10/14/good-1/" class="thumbnail">
-    
-    
-        <span style="background-image:url(http://www.popoho.com/d/file/ss/20160224/3-151102153U3.jpg)" alt="心型幸运四叶草" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="ds-thread-count" data-thread-key="2016/10/14/good-1/">0</span>
-    
-</span>
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/categories/生活/">生活</a>
-            </p>
-            <p class="date"><time datetime="2016-10-14T01:07:47.000Z" itemprop="datePublished">2016-10-14</time></p>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2016/10/14/good-1/">心型幸运四叶草</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-                很喜欢这句话：没有任何好抱怨的事，你的每一秒都在为曾经的选择买单
-
-        </p>
-    </div>
-</article>
-    
-        </div>
-    
-
-    
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2016/10/14/hello-world/" class="thumbnail">
-    
-    
-        <span style="background-image:url(http://oe5k1lm4a.bkt.clouddn.com/psb.jpg)" alt="欢迎来到我的博客" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="ds-thread-count" data-thread-key="2016/10/14/hello-world/">0</span>
-    
-</span>
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/categories/博客/">博客</a>
-            </p>
-            <p class="date"><time datetime="2016-10-13T16:00:00.000Z" itemprop="datePublished">2016-10-14</time></p>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2016/10/14/hello-world/">欢迎来到我的博客</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
+        <footer class="article-footer">
             
-欢迎光临Hexo!这是我的第一个帖子。查看更多信息(文档)(https://hexo.io/docs/)。当使用Hexo如果你有任何问题,你可以找到答案(故障排除)(https://hexo.io/docs/troubleshooting.html)
-快速启动创建一个新的帖子1$ hexo new "My New Post"
-more info: Writing
-Run server（运行服务器
-        </p>
+    <div class="jiathis_style">
+    <span class="jiathis_txt">分享到：</span>
+    <a class="jiathis_button_qzone">QQ空间</a>
+    <a class="jiathis_button_tsina">新浪微博</a>
+    <a class="jiathis_button_tqq">腾讯微博</a>
+    <a class="jiathis_button_weixin">微信</a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+    <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<style>
+    .jiathis_style div:first-child:not(.jiadiv_01) {
+        width: auto !important;
+        border: none !important;
+    }
+    .jiathis_style .jiadiv_01 {
+        margin: 10px 0;
+        border-radius: 4px;
+        border: #e1e1e1 solid 1px;
+    }
+    .jiathis_style .jiadiv_01 div:first-child {
+        display: none;
+    }
+    .jiathis_style .jiadiv_02 {
+        padding: 7px 0 !important;
+    }
+    .jiathis_style .jiadiv_02 .jiatitle {
+        width: 85px;
+        border: none;
+        height: auto;
+        margin: 3px 10px;
+        padding: 6px 10px;
+        border-radius: 4px;
+    }
+    .jiathis_style .jiadiv_02 .jiatitle:hover {
+        border: none;
+    }
+    .jiathis_style .jiadiv_02 .jiatitle:nth-child(even) {
+        margin-left: 0;
+    }
+    .jiathis_style .jtico:hover {
+        opacity: 1;
+    }
+    .jiathis_style .ckepopBottom,
+    .jiathis_style .centerBottom {
+        width: auto !important;
+        padding: 5px;
+        background: #f7f7f7;
+    }
+</style>
+
+
+
+
+        </footer>
     </div>
 </article>
+
+    <section id="comments">
     
-        </div>
+        
+    <div class="ds-thread" data-thread-key="2016/10/14/jobone/" data-title="触发器" data-url="https://hantiantian.github.io/2016/10/14/jobone/"></div>
+    <style>
+        #ds-thread #ds-reset .ds-textarea-wrapper {
+            background: none;
+        }
+        #ds-reset .ds-avatar img {
+            box-shadow: none;
+        }
+        #ds-reset .ds-gradient-bg {
+            background: #f7f7f7;
+        }
+        #ds-thread #ds-reset li.ds-tab a {
+            border-radius: 3px;
+        }
+        #ds-thread #ds-reset .ds-post-button {
+            color: white;
+            border: none;
+            box-shadow: none;
+            background: #d32;
+            text-shadow: none;
+            font-weight: normal;
+            font-family: 'Microsoft Yahei';
+        }
+        #ds-thread #ds-reset .ds-post-button:hover {
+            color: white;
+            background: #DE594C;
+        }
+        #ds-thread #ds-reset .ds-post-button:active {
+            background: #d32;
+        }
+        #ds-smilies-tooltip ul.ds-smilies-tabs li a.ds-current {
+            color: white;
+            background: #d32;
+            box-shadow: none;
+            text-shadow: none;
+            font-weight: normal;
+        }
+    </style>
+
     
-
-
-    </div></section>
-
-
+    </section>
 
                         </div>
                     </section>
@@ -329,6 +311,19 @@ Run server（运行服务器
             
         </ul>
     </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2016/10/14/good-1/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">上一篇</strong>
+        <p class="article-nav-title">心型幸运四叶草</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
     
     <div class="widgets-container">
         
