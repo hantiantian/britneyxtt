@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="布莱尼小甜甜">
 <meta property="og:description" content="1.主要是通过事件进行触发被自动调用执行的。触发器对表进行插入、更新、删除的时候会自动执行的特殊存储过程，触发器和普通的存储过程的区别是：触发器是当对某一个表进行操作。诸如：update、insert、delete这些操作的时候，系统会自动调用执行该表上对应的触发器 DML触发器分为：    1、 after触发器（之后触发）：Inserted表和Deleted        a.ins">
 <meta property="og:image" content="http://p.3761.com/pic/75631409877601.jpg">
-<meta property="og:updated_time" content="2016-10-14T01:44:12.771Z">
+<meta property="og:updated_time" content="2016-10-14T09:39:46.958Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="触发器">
 <meta name="twitter:description" content="1.主要是通过事件进行触发被自动调用执行的。触发器对表进行插入、更新、删除的时候会自动执行的特殊存储过程，触发器和普通的存储过程的区别是：触发器是当对某一个表进行操作。诸如：update、insert、delete这些操作的时候，系统会自动调用执行该表上对应的触发器 DML触发器分为：    1、 after触发器（之后触发）：Inserted表和Deleted        a.ins">
@@ -145,7 +145,33 @@
 <li>如果该学生已经毕业，我希望删除他的学号的同时，也删除它的借书记录。等等。这时候可以用到触发器。对于1，创建一个Update触发器：<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">Create</span> <span class="keyword">Trigger</span> truStudent  </div><div class="line"><span class="keyword">On</span> Student              <span class="comment">--在Student表中创建触发器</span></div><div class="line"><span class="keyword">for</span> <span class="keyword">Update</span>          <span class="comment">--为什么事件触发</span></div><div class="line"><span class="keyword">As</span>                            <span class="comment">--事件触发后所要做的情</span></div><div class="line"><span class="keyword">if</span> <span class="keyword">Update</span>(StudentID)</div><div class="line"><span class="keyword">begin</span>   </div><div class="line"><span class="keyword">Update</span> BorrowRecord  <span class="keyword">Set</span> StudentID=i.StudentID  </div><div class="line"><span class="keyword">From</span> BorrowRecord br,Deleted d,Inserted i </div><div class="line"><span class="comment">--Deleted和Inserted临时表 </span></div><div class="line"><span class="keyword">Where</span> br.StudentID=d.StudentID</div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure>
 </li>
 </ol>
-<p>理解触发器里面的两个临时的表：Deleted , Inserted 。注意Deleted 与Inserted分别表示触发事件的表“旧的一条记录”和“新的一条记录”。<br>| 虚拟表 | Inserted |Deleted|<br>|——–|——–|——–|<br>|在表记录新增时|存放新增的记录|不存储记录|<br>|修改时|存放用来更新的记录|存放更新前的记录|<br>|删除时|不存储记录|存放被删除的记录|</p>
+<p>理解触发器里面的两个临时的表：Deleted , Inserted 。注意Deleted 与Inserted分别表示触发事件的表“旧的一条记录”和“新的一条记录”。</p>
+<table>
+<thead>
+<tr>
+<th>虚拟表</th>
+<th>Inserted</th>
+<th>Deleted</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>在表记录新增时</td>
+<td>存放新增的记录</td>
+<td>不存储记录</td>
+</tr>
+<tr>
+<td>修改时</td>
+<td>存放用来更新的记录</td>
+<td>存放更新前的记录</td>
+</tr>
+<tr>
+<td>删除时</td>
+<td>不存储记录</td>
+<td>存放被删除的记录</td>
+</tr>
+</tbody>
+</table>
 
         </div>
         <footer class="article-footer">
