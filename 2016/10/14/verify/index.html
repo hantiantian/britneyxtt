@@ -3,23 +3,29 @@
 <head>
     <meta charset="utf-8">
     
-    <title>触发器 | 布莱尼小甜甜</title>
+    <title>手机短信验证码发送遇到的问题 | 布莱尼小甜甜</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
         <meta name="keywords" content="" />
     
-    <meta name="description" content="1.主要是通过事件进行触发被自动调用执行的。触发器对表进行插入、更新、删除的时候会自动执行的特殊存储过程，触发器和普通的存储过程的区别是：触发器是当对某一个表进行操作。诸如：update、insert、delete这些操作的时候，系统会自动调用执行该表上对应的触发器 DML触发器分为：    1、 after触发器（之后触发）：Inserted表和Deleted        a.ins">
+    <meta name="description" content="阿里短信发送频率上的限制：1.短信验证码 ：使用同一个签名，对同一个手机号码发送短信验证码，支持1条/分钟，累计7条/小时；
+   当用户一分钟连续提交两次获验证码就会报错，解决方法将TopClient.php中代码注释掉例如：
+   123456789101112131415161718		//如果TOP返回了错误码，记录到业务错误日志中		if (isset($respObject-&amp;gt;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="触发器">
-<meta property="og:url" content="https://hantiantian.github.io/2016/10/14/jobone/index.html">
+<meta property="og:title" content="手机短信验证码发送遇到的问题">
+<meta property="og:url" content="https://hantiantian.github.io/2016/10/14/verify/index.html">
 <meta property="og:site_name" content="布莱尼小甜甜">
-<meta property="og:description" content="1.主要是通过事件进行触发被自动调用执行的。触发器对表进行插入、更新、删除的时候会自动执行的特殊存储过程，触发器和普通的存储过程的区别是：触发器是当对某一个表进行操作。诸如：update、insert、delete这些操作的时候，系统会自动调用执行该表上对应的触发器 DML触发器分为：    1、 after触发器（之后触发）：Inserted表和Deleted        a.ins">
-<meta property="og:image" content="http://p.3761.com/pic/75631409877601.jpg">
-<meta property="og:updated_time" content="2016-10-14T09:42:12.779Z">
+<meta property="og:description" content="阿里短信发送频率上的限制：1.短信验证码 ：使用同一个签名，对同一个手机号码发送短信验证码，支持1条/分钟，累计7条/小时；
+   当用户一分钟连续提交两次获验证码就会报错，解决方法将TopClient.php中代码注释掉例如：
+   123456789101112131415161718		//如果TOP返回了错误码，记录到业务错误日志中		if (isset($respObject-&amp;gt;">
+<meta property="og:image" content="http://img3.douban.com/view/note/large/public/p42092579-1.jpg">
+<meta property="og:updated_time" content="2016-10-21T09:45:09.935Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="触发器">
-<meta name="twitter:description" content="1.主要是通过事件进行触发被自动调用执行的。触发器对表进行插入、更新、删除的时候会自动执行的特殊存储过程，触发器和普通的存储过程的区别是：触发器是当对某一个表进行操作。诸如：update、insert、delete这些操作的时候，系统会自动调用执行该表上对应的触发器 DML触发器分为：    1、 after触发器（之后触发）：Inserted表和Deleted        a.ins">
-<meta name="twitter:image" content="http://p.3761.com/pic/75631409877601.jpg">
+<meta name="twitter:title" content="手机短信验证码发送遇到的问题">
+<meta name="twitter:description" content="阿里短信发送频率上的限制：1.短信验证码 ：使用同一个签名，对同一个手机号码发送短信验证码，支持1条/分钟，累计7条/小时；
+   当用户一分钟连续提交两次获验证码就会报错，解决方法将TopClient.php中代码注释掉例如：
+   123456789101112131415161718		//如果TOP返回了错误码，记录到业务错误日志中		if (isset($respObject-&amp;gt;">
+<meta name="twitter:image" content="http://img3.douban.com/view/note/large/public/p42092579-1.jpg">
     
 
     
@@ -113,14 +119,14 @@
     </h1>
 </div>
                         <div class="main-body-content">
-                            <article id="post-jobone" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-verify" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        触发器
+        手机短信验证码发送遇到的问题
         </h1>
     
 
@@ -128,7 +134,7 @@
         
         
             <div class="article-subtitle">
-                <a href="/2016/10/14/jobone/" class="article-date">
+                <a href="/2016/10/14/verify/" class="article-date">
     <time datetime="2016-10-14T01:13:00.000Z" itemprop="datePublished">2016-10-14</time>
 </a>
                 
@@ -136,42 +142,12 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <p><img src="http://p.3761.com/pic/75631409877601.jpg" alt="苦逼程序员"><br>     1.主要是通过事件进行触发被自动调用执行的。触发器对表进行插入、更新、删除的时候会自动执行的特殊存储过程，触发器和普通的存储过程的区别是：触发器是当对某一个表进行操作。诸如：update、insert、delete这些操作的时候，系统会自动调用执行该表上对应的触发器<br> DML触发器分为：<br>    1、 after触发器（之后触发）：Inserted表和Deleted<br>        a.insert触发器<br>        b.update触发器<br>        c.delete触发器<br>   2、 instead of 触发器 （之前触发）：Inserted表和Deleted<br>注意的是：触发器本身就是一个事务，所以在触发器里面可以对修改数据进行一些特殊的检查。如果不满足可以利用事务回滚，撤销操作。<br>注意：<br>     1.每个表的每个事件最多只能定义一个触发器<br>     2.触发器始终只针对一条记录的，而不是针对整个sql语句，如果变更的数据集非常大的话，效率会很低<br>触发器本身的限制也使用与MYSQL的有：<br>     1.触发器可以掩盖服务器背后的工作，一个简单的sql语句背后，因为触发器，可能包含了很多看不见的工作。例如，触发器可能会更新另一个相关表，那么这个触发器会让这条sql语句影响的记录数翻<br>     2.触发器的问题也很难排查，如果某个性能问题和触发器相关，那么原来的sql语句也会失败。<br>     3.触发器可能导致死锁和所等待。触发器失败原来的sql语句也失败，如果没有察觉是触发器引起的原因，那么很难理解服务器抛出的错误代码是什么。</p>
-<p>触发器的使用示例：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">Create</span> <span class="keyword">Table</span> Student(                                       <span class="comment">--学生表</span></div><div class="line">     StudentID <span class="built_in">int</span> primary <span class="keyword">key</span>,                             <span class="comment">--学号</span></div><div class="line">     ....</div><div class="line">)</div><div class="line"><span class="keyword">Create</span> <span class="keyword">Table</span> BorrowRecord(                          <span class="comment">--学生借书记录表</span></div><div class="line">    BorrowRecord   <span class="built_in">int</span> <span class="keyword">identity</span>(<span class="number">1</span>,<span class="number">1</span>),                <span class="comment">--流水号</span></div><div class="line">    StudentID      <span class="built_in">int</span> ,                             <span class="comment">--学号</span></div><div class="line">    BorrowDate     datetime,                         <span class="comment">--借出时间</span></div><div class="line">    ReturnDAte     Datetime,                         <span class="comment">--归还时间</span></div><div class="line">    ...</div><div class="line">)</div></pre></td></tr></table></figure>
-<p>用到的功能有:  </p>
-<ol>
-<li>如果我更改了学生的学号,我希望他的借书记录仍然与这个学生相关(也就是同时更改借书记录表的学号); </li>
-<li>如果该学生已经毕业，我希望删除他的学号的同时，也删除它的借书记录。等等。这时候可以用到触发器。对于1，创建一个Update触发器：<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">Create</span> <span class="keyword">Trigger</span> truStudent  </div><div class="line"><span class="keyword">On</span> Student              <span class="comment">--在Student表中创建触发器</span></div><div class="line"><span class="keyword">for</span> <span class="keyword">Update</span>          <span class="comment">--为什么事件触发</span></div><div class="line"><span class="keyword">As</span>                            <span class="comment">--事件触发后所要做的情</span></div><div class="line"><span class="keyword">if</span> <span class="keyword">Update</span>(StudentID)</div><div class="line"><span class="keyword">begin</span>   </div><div class="line"><span class="keyword">Update</span> BorrowRecord  <span class="keyword">Set</span> StudentID=i.StudentID  </div><div class="line"><span class="keyword">From</span> BorrowRecord br,Deleted d,Inserted i </div><div class="line"><span class="comment">--Deleted和Inserted临时表 </span></div><div class="line"><span class="keyword">Where</span> br.StudentID=d.StudentID</div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>理解触发器里面的两个临时的表：Deleted , Inserted 。注意Deleted 与Inserted分别表示触发事件的表“旧的一条记录”和“新的一条记录”。</p>
-<table>
-<thead>
-<tr>
-<th>虚拟表</th>
-<th>Inserted</th>
-<th>Deleted</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>在表记录新增时</td>
-<td>存放新增的记录</td>
-<td>不存储记录</td>
-</tr>
-<tr>
-<td>修改时</td>
-<td>存放用来更新的记录</td>
-<td>存放更新前的记录</td>
-</tr>
-<tr>
-<td>删除时</td>
-<td>不存储记录</td>
-<td>存放被删除的记录</td>
-</tr>
-</tbody>
-</table>
+            <p><img src="http://img3.douban.com/view/note/large/public/p42092579-1.jpg" alt=""></p>
+<p>阿里短信发送频率上的限制：<br>1.短信验证码 ：使用同一个签名，对同一个手机号码发送短信验证码，支持1条/分钟，累计7条/小时；</p>
+<p>   当用户一分钟连续提交两次获验证码就会报错，解决方法将TopClient.php中代码注释掉例如：</p>
+   <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">		//如果TOP返回了错误码，记录到业务错误日志中</div><div class="line"></div><div class="line">		if (isset($respObject-&gt;code))</div><div class="line"></div><div class="line">		&#123;</div><div class="line">331			/* $logger = new TopLogger;</div><div class="line"></div><div class="line">332			$logger-&gt;conf[&quot;log_file&quot;] = rtrim(TOP_SDK_WORK_DIR, &apos;\\/&apos;) . &apos;/&apos; . &quot;logs/top_biz_err_&quot; . $this-&gt;appkey 333            . &quot;_&quot; . date(&quot;Y-m-d&quot;) . &quot;.log&quot;;</div><div class="line"></div><div class="line">334			$logger-&gt;log(array(</div><div class="line"></div><div class="line">335				date(&quot;Y-m-d H:i:s&quot;),</div><div class="line"></div><div class="line">336			$resp</div><div class="line"></div><div class="line">337			)); */</div><div class="line"></div><div class="line">		&#125;</div></pre></td></tr></table></figure>
+<p>这个方法只能解决一分钟内连续发送不会报错，当用户刚获取了一次验证码，退出应用在一分钟之内又进来获取验码，获取不到验证码。没有找到解决方法</p>
+<p>短信通知： 使用同一个签名和同一个短信模板ID，对同一个手机号码发送短信通知，支持50条/日（指自然日）；（限制了一天只能获取七条）</p>
 
         </div>
         <footer class="article-footer">
@@ -237,7 +213,7 @@
     <section id="comments">
     
         
-    <div class="ds-thread" data-thread-key="2016/10/14/jobone/" data-title="触发器" data-url="https://hantiantian.github.io/2016/10/14/jobone/"></div>
+    <div class="ds-thread" data-thread-key="2016/10/14/verify/" data-title="手机短信验证码发送遇到的问题" data-url="https://hantiantian.github.io/2016/10/14/verify/"></div>
     <style>
         #ds-thread #ds-reset .ds-textarea-wrapper {
             background: none;
@@ -341,10 +317,20 @@
         
 <nav id="article-nav">
     
+        <a href="/2016/10/14/jobone/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">下一篇</strong>
+        <p class="article-nav-title">
+        
+            触发器
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
     
-        <a href="/2016/10/14/verify/" id="article-nav-older" class="article-nav-link-wrap">
+    
+        <a href="/2016/10/14/good-1/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">上一篇</strong>
-        <p class="article-nav-title">手机短信验证码发送遇到的问题</p>
+        <p class="article-nav-title">心型幸运四叶草</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
